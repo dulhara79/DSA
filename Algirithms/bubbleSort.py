@@ -7,8 +7,8 @@ BUBBLESORT(A)
 '''
 
 arr = []
-for v in range(5):
-    arr.append(int(input("Enter number: ")))
+#for v in range(5):
+#    arr.append(int(input("Enter number: ")))
 
 print("Unsorted array: ", arr)
 
@@ -19,7 +19,17 @@ def bubbleSort(arr):
             if arr[j] < arr[j - 1]:
                 arr[j], arr[j - 1] = arr[j - 1], arr[j]
 
-bubbleSort(arr)
+def BUBBLESORT(arr):
+    n = len(arr)
+    for i in range(n-1):
+        for j in range (n-1, i, -1):
+            if arr[j] < arr[j-1]:
+                arr[j], arr[j-1] = arr[j-1], arr[j]
 
-print("Sorted array: ", arr)
+
+bubbleSort(arr)
+print("Sorted by using bubbleSort function: \n", arr)
+
+BUBBLESORT(arr)
+print("\nSorted by using BUBBLESORT function: \n", arr)
 
